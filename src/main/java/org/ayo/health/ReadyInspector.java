@@ -18,10 +18,10 @@ public class ReadyInspector implements HealthCheck {
 	@Override
 	public HealthCheckResponse call() {
 		if (resourceService.hasAnyResource()) {
-			HealthCheckResponse.named("I'm ready :)").up().build();
+			return HealthCheckResponse.named("I'm ready :)").up().build();
 		}
 		
-		return HealthCheckResponse.named("I'm not ready :(").down().build();
+		return HealthCheckResponse.named("I'm not ready yet :(").down().build();
 	}
 	
 }

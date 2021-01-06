@@ -10,12 +10,12 @@ import io.quarkus.test.junit.QuarkusTest;
 class ResourceServiceTest {
 
 	@Test
-	void testIfGetWorks() {
+	void testIfGetResourceWorks() {
 		given()
 			.when()
 			.get("/resources")
 			.then()
 			.statusCode(200);
 	}
-
+	
 }

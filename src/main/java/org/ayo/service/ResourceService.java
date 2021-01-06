@@ -49,7 +49,7 @@ public class ResourceService {
 	}
 
 	public boolean hasAnyResource() {
-		return resources.isEmpty();
+		return !resources.isEmpty();
 	}
 
 }

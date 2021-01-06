@@ -1,0 +1,9 @@
+FROM oracle/graalvm-ce:latest
+COPY . /usr/app
+WORKDIR /usr/app
+RUN gu install native-image
+RUN ls
+RUN ./mvnw clean compile quarkus:native-image -Pnative
+RUN ls ./target/
+
+# RUN ./target/notes-runner
